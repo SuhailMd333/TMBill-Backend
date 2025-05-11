@@ -18,9 +18,9 @@ const TaskAPI = require('./routes/task')
 app.use('/api/v1', UserAPI)
 app.use('/api/v2', TaskAPI)
 
-// const PORT = 5000 
+const PORT = process.env.PORT || 5000 
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
     
 });
