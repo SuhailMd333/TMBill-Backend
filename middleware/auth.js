@@ -11,7 +11,7 @@ const authentication =   (req, res, next) => {
                 hint: 'Send token in Authorization: Bearer <token> or auth-token header'
             });
     }
-            const decoded =  jwt.verify(token, process.env.JWT_SECRET, {
+            const decoded =  jwt.verify(token,'suhailisagoodboy', {
             algorithms: ['HS256'] // Specify expected algorithm
         });
             req.user = decoded.user;
